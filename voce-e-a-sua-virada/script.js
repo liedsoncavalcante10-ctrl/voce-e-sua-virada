@@ -14,7 +14,7 @@
    ------------------------------------------------------------ */
 const CONFIG = {
   // LINK PROVISÓRIO — SUBSTITUIR pelo link real do checkout:
-  checkoutUrl:checkoutUrl: "https://kiwify.app/5OPHM2Y", 
+   checkoutUrl: "https://kiwify.app/5OPHM2Y",
 
   // Abrir o checkout em nova aba? (true = nova aba, false = mesma aba)
   openInNewTab: false,
