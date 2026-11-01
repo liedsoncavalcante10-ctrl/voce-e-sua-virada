@@ -10,7 +10,6 @@
   <meta property="og:title" content="Você é a sua virada — 7 dias para viver o verão com mais confiança e liberdade">
   <meta property="og:description" content="Sete dias de atividades curtas e desafios reais para estar dentro da cena, e não assistindo de fora.">
   <meta property="og:locale" content="pt_BR">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
@@ -18,458 +17,380 @@
 </head>
 <body>
 
-  <!--
-    ============================================================
-    LINK DE COMPRA PROVISÓRIO
-    Todos os botões "Quero meu guia" usam o atributo data-checkout.
-    O endereço real do checkout é definido em UM único lugar:
-    script.js  →  CONFIG.checkoutUrl
-    ============================================================
-  -->
-
-  <header class="topbar" id="topo">
-    <div class="wrap topbar__in">
-      <a class="brand" href="#topo" aria-label="Você é a sua virada — início">
-        <svg class="brand__sun" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><circle cx="16" cy="16" r="7" fill="#FFB830"/><g stroke="#FFB830" stroke-width="2" stroke-linecap="round"><path d="M16 2v4M16 26v4M2 16h4M26 16h4M6.1 6.1l2.8 2.8M23.1 23.1l2.8 2.8M25.9 6.1l-2.8 2.8M8.9 23.1l-2.8 2.8"/></g></svg>
-        <span>Você é a sua virada</span>
-      </a>
-      <nav class="nav" aria-label="Seções">
-        <a href="#problema">A cena</a>
-        <a href="#dias">7 dias</a>
-        <a href="#recebe">O que você recebe</a>
-        <a href="#faq">Dúvidas</a>
-      </nav>
-      <a class="btn btn--small" href="#comprar" data-checkout>Quero meu guia</a>
-    </div>
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="wrap hero__in">
-        <div class="hero__text">
-          <p class="eyebrow">Guia prático · 7 dias · para adultos</p>
-          <h1>Estar <em>dentro</em> do verão, e não assistindo de fora.</h1>
-          <p class="lead">
-            <strong>Você é a sua virada</strong> é um treino de 7 dias, com atividades curtas e desafios da vida real,
-            para viver praia, fotos, festas e conversas com mais confiança e liberdade, mesmo sem gostar de tudo em si.
-          </p>
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="#comprar" data-checkout>Quero meu guia por R$&nbsp;19,90</a>
-            <a class="btn btn--ghost" href="#dias">Ver os 7 dias</a>
-          </div>
-          <ul class="chips" aria-label="Resumo">
-            <li>5 a 15 min por dia</li>
-            <li>Só precisa de um caderno ou bloco de notas</li>
-            <li>Desafios opcionais e ajustáveis</li>
-          </ul>
-          <p class="fineprint">Material educativo e de autodesenvolvimento. Não é terapia e não substitui acompanhamento profissional.</p>
-        </div>
-
-        <div class="hero__art" aria-hidden="true">
-          <svg viewBox="0 0 400 420" role="img" focusable="false">
-            <defs>
-              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#FFD98A"/>
-                <stop offset="0.55" stop-color="#FFB38A"/>
-                <stop offset="1" stop-color="#FF8F73"/>
-              </linearGradient>
-              <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#1FA3A8"/>
-                <stop offset="1" stop-color="#0B5E6B"/>
-              </linearGradient>
-            </defs>
-            <rect width="400" height="420" rx="32" fill="url(#sky)"/>
-            <circle cx="270" cy="170" r="70" fill="#FFF3C9" opacity=".55"/>
-            <circle cx="270" cy="170" r="46" fill="#FFF8DE"/>
-            <path d="M0 250 C60 232 110 268 170 252 C230 236 290 268 400 246 V420 H0Z" fill="url(#sea)"/>
-            <path d="M0 292 C70 274 120 306 190 290 C260 274 320 306 400 288 V420 H0Z" fill="#0E7C86" opacity=".9"/>
-            <path d="M0 336 C80 320 130 350 200 336 C270 322 330 350 400 334 V420 H0Z" fill="#0B3C49"/>
-            <g fill="none" stroke="#FFF8DE" stroke-width="2.5" stroke-linecap="round" opacity=".8">
-              <path d="M40 270c10-6 20-6 30 0M120 282c10-6 20-6 30 0M300 268c10-6 20-6 30 0"/>
-            </g>
-          </svg>
-          <p class="hero__quote">“Você não precisa gostar de tudo em si para viver bem o verão.”</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROBLEMA -->
-    <section class="section" id="problema">
-      <div class="wrap narrow">
-        <p class="eyebrow">Uma cena que você conhece</p>
-        <h2>O dia está lindo. E você está em outro lugar.</h2>
-        <div class="scene">
-          <p>
-            Você chega na praia. O grupo já está na água, alguém grita “vem!”. E você, por dentro, está ajeitando a canga,
-            medindo quem está olhando, calculando quanto tempo dá para ficar parado ali sem parecer que está se escondendo.
-            Na foto do grupo, escolhe o canto e pede “tira outra”. À noite, na festa, a roupa foi trocada três vezes, e a terceira
-            foi a que menos incomoda, não a que mais combina com o que você queria viver.
-          </p>
-        </div>
-        <p class="big">
-          Nada disso é frescura. É atenção sendo gasta longe do que está acontecendo: em vez de estar <em>dentro</em> da cena,
-          você está <em>assistindo</em> a ela de fora, como se fosse um juiz.
-        </p>
-        <p>
-          O verão cobra isso de um jeito particular, porque expõe o corpo, o rosto, as fotos e a convivência, tudo ao mesmo tempo.
-          A proposta deste guia é simples e pouco glamourosa: você precisa de <strong>duas ou três habilidades pequenas, treinadas em situações reais</strong>.
-          Voltar a atenção para o que está acontecendo, escolher o que fazer mesmo com o pensamento crítico ligado e medir a sua vida por mais do que a sua imagem.
-        </p>
-
-        <div class="reco">
-          <div class="reco__col">
-            <h3>Este guia é para você se…</h3>
-            <ul class="ticks">
-              <li>Quer curtir praia, piscina, festas e viagens, mas se pega adiando, escondendo ou sofrendo antes e depois.</li>
-              <li>Se compara com frequência, principalmente nas redes sociais, e termina o dia se sentindo menos.</li>
-              <li>Decide pelo que os outros vão pensar, e não pelo que quer.</li>
-              <li>Já tentou “pensar positivo” ou “se amar mais” e sentiu que isso não funcionou na hora H.</li>
-            </ul>
-          </div>
-          <div class="reco__col reco__col--no">
-            <h3>Este guia não é para você se…</h3>
-            <ul class="crosses">
-              <li>Busca transformação de aparência, dieta ou corpo. Aqui o corpo não é o projeto.</li>
-              <li>Espera que a ansiedade ou a insegurança desapareçam. Elas podem diminuir, mas esse não é o objetivo.</li>
-              <li>Está em sofrimento intenso, ou evita trabalho, estudos ou relacionamentos há bastante tempo. Nesses casos, o ideal é buscar um profissional (veja “Quando este guia não basta”, no próprio material).</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MÉTODO / BENEFÍCIOS -->
-    <section class="section section--sea" id="metodo">
-      <div class="wrap">
-        <div class="center">
-          <p class="eyebrow eyebrow--light">O método</p>
-          <h2>Três movimentos e uma regra</h2>
-          <p class="sub">
-            Inspirado em ideias de abordagens da psicologia, como TCC e ACT, e em práticas de autocompaixão, traduzidas para o dia a dia.
-            É um treino curto, com tarefas pequenas e reais.
-          </p>
-        </div>
-
-        <div class="moves">
-          <article class="move">
-            <span class="move__n">1</span>
-            <h3>Notar</h3>
-            <p>Perceber, sem discutir, o que a mente está dizendo: “estou me comparando”, “estou calculando o ângulo”. Você não precisa calar o pensamento, só deixar de obedecê-lo sem perceber.</p>
-          </article>
-          <article class="move">
-            <span class="move__n">2</span>
-            <h3>Escolher</h3>
-            <p>Trocar o “o que vão pensar?” por “o que eu quero que esse momento seja?” e dar um passo, mesmo pequeno, na direção do que importa para você.</p>
-          </article>
-          <article class="move">
-            <span class="move__n">3</span>
-            <h3>Voltar</h3>
-            <p>Trazer a atenção para algo concreto da cena: a água, o rosto de quem fala, a música, o gosto da comida. A prática mais simples e a mais repetida do guia.</p>
-          </article>
-        </div>
-
-        <div class="rule">
-          <h3>A regra: degraus, não saltos</h3>
-          <p>
-            Cada desafio é <strong>um pouco desconfortável, não insuportável</strong>. Se estiver difícil demais, você tem permissão para reduzir.
-            Todo desafio tem uma <strong>versão mínima</strong> para dias difíceis, e ela vale como cumprido. Todos são opcionais e ajustáveis.
-          </p>
-        </div>
-
-        <div class="benefits">
-          <h3 class="benefits__title">Ao final dos 7 dias, você terá três coisas que podem durar</h3>
-          <div class="benefits__grid">
-            <article>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3V4Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 9h6M9 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-              <h4>Um caderno de bordo</h4>
-              <p>Com o que você descobriu sobre si: suas fugas, suas previsões e o que de fato aconteceu.</p>
-            </article>
-            <article>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5 5L4 17l3 3 5.7-5.7a4 4 0 0 0 5-5l-2.4 2.4-2.6-.6-.6-2.6 2.6-2.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-              <h4>Um kit de ferramentas</h4>
-              <p>Para fotos, roupas, praia, festas, conversas e comparação, para usar na hora, em situações reais.</p>
-            </article>
-            <article>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-              <h4>Um acordo pessoal com o verão</h4>
-              <p>Escrito por você, com regras gentis e um plano para os dias ruins.</p>
-            </article>
-          </div>
-          <p class="honest">Não prometemos uma pessoa nova. Prometemos um jeito mais firme de continuar sendo você em lugares onde antes você se encolhia.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- OS 7 DIAS -->
-    <section class="section" id="dias">
-      <div class="wrap">
-        <div class="center">
-          <p class="eyebrow">Os 7 dias</p>
-          <h2>Uma atividade curta e um desafio da vida real, por dia</h2>
-          <p class="sub">
-            Cada dia tem: ideia central (2 min), atividade prática (5 a 15 min), desafio na sua rotina normal e uma pergunta de reflexão à noite, em até 3 linhas.
-          </p>
-        </div>
-
-        <ol class="days">
-          <li class="day">
-            <div class="day__n"><span>Dia</span>1</div>
-            <div class="day__body">
-              <h3>Mapa: o que você evita e o que você quer</h3>
-              <p class="day__meta">Atividade de 15 min · “Mapa do verão”</p>
-              <p>Enxergar o desenho das suas pequenas fugas e escolher uma delas como alvo, comparando o que ela custa com o que ela protege.</p>
-              <p class="day__ch"><strong>Desafio:</strong> observar suas fugas em tempo real e registrar pelo menos 3. <em>Versão mínima: registrar 1.</em></p>
-            </div>
-          </li>
-          <li class="day">
-            <div class="day__n"><span>Dia</span>2</div>
-            <div class="day__body">
-              <h3>Fotos: de objeto de avaliação a registro de vivência</h3>
-              <p class="day__meta">Atividade de 10 min · “Duas leituras da mesma foto”</p>
-              <p>Olhar uma foto como repórter e como amigo, e aprender a regra dos 3 segundos antes de apagar ou pedir para repetir.</p>
-              <p class="day__ch"><strong>Desafio:</strong> aparecer em pelo menos uma foto sem pedir para repetir nem apagar. <em>Versão mínima: aparecer em uma foto de grupo, sem pedir para ver antes.</em></p>
-            </div>
-          </li>
-          <li class="day">
-            <div class="day__n"><span>Dia</span>3</div>
-            <div class="day__body">
-              <h3>Roupas: vestir para viver, não para se defender</h3>
-              <p class="day__meta">Atividade de 10 min · “Teste das três perguntas”</p>
-              <p>Escolher pelo que deixa você livre para fazer o que quer, e não pelo que esconde mais. Aqui não se trata de “se vestir bem”: o foco é a razão da escolha.</p>
-              <p class="day__ch"><strong>Desafio:</strong> usar uma peça “verde” (que te deixa livre) onde normalmente usaria uma “vermelha”, ou aplicar o 1% de ousadia.</p>
-            </div>
-          </li>
-          <li class="day">
-            <div class="day__n"><span>Dia</span>4</div>
-            <div class="day__body">
-              <h3>Comparação social: usar a régua certa</h3>
-              <p class="day__meta">Atividade de 12 min · “Auditoria do feed”</p>
-              <p>Notar a comparação, rotulá-la e decidir o que fazer com ela, com a ferramenta “Notar, Rotular, Retornar”.</p>
-              <p class="day__ch"><strong>Desafio:</strong> usar o “Notar, Rotular, Retornar” pelo menos duas vezes em situações reais. <em>Versão mínima: silenciar um perfil gatilho e usar uma vez.</em></p>
-            </div>
-          </li>
-          <li class="day">
-            <div class="day__n"><span>Dia</span>5</div>
-            <div class="day__body">
-              <h3>Praia e piscina: o corpo como lugar de onde você vive</h3>
-              <p class="day__meta">Atividade de 10 min · “Mapa sensorial” e “Âncora dos 5 sentidos”</p>
-              <p>Trocar a vigilância de si e dos outros por atenção aos sentidos e ao movimento. Nenhum exercício pede que você goste do seu corpo.</p>
-              <p class="day__ch"><strong>Desafio em 3 níveis:</strong> do plano de atenção por 30 minutos até fazer algo que você costuma evitar. <em>Não precisa ser na praia; versão mínima: 1 minuto de Âncora ao ar livre.</em></p>
-            </div>
-          </li>
-          <li class="day">
-            <div class="day__n"><span>Dia</span>6</div>
-            <div class="day__body">
-              <h3>Festas e conversas: atenção para fora</h3>
-              <p class="day__meta">Atividade de 12 min · “Roteiro de bolso”</p>
-              <p>Montar perguntas abertas, histórias curtas, uma saída gentil e uma meta pequena. Na conversa, a ferramenta “Dois por conversa”.</p>
-              <p class="day__ch"><strong>Desafio:</strong> iniciar ou continuar uma conversa de pelo menos 5 minutos. <em>Versão mínima: fazer uma pergunta aberta a alguém e ouvir a resposta.</em></p>
-            </div>
-          </li>
-          <li class="day">
-            <div class="day__n"><span>Dia</span>7</div>
-            <div class="day__body">
-              <h3>Balanço e acordo pessoal com o verão</h3>
-              <p class="day__meta">Atividade de 15 min · “Balanço da semana + Acordo pessoal”</p>
-              <p>Sem técnica nova: uma revisão do que funcionou para você e um compromisso escrito com as suas palavras.</p>
-              <p class="day__ch"><strong>Desafio:</strong> compartilhar o acordo com alguém de confiança (ou gravar um áudio) e marcar o primeiro passo na agenda. <em>Versão mínima: terminar de preencher e marcar o passo.</em></p>
-            </div>
-          </li>
-        </ol>
-
-        <div class="center cta-inline">
-          <a class="btn btn--primary" href="#comprar" data-checkout>Quero começar os 7 dias</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- O QUE RECEBE -->
-    <section class="section section--sand" id="recebe">
-      <div class="wrap">
-        <div class="center">
-          <p class="eyebrow">O que você recebe</p>
-          <h2>Tudo o que está dentro do guia</h2>
-          <p class="sub">Um único material completo, sem módulos escondidos e sem bônus à parte.</p>
-        </div>
-
-        <div class="includes">
-          <article class="inc">
-            <h3>7 módulos diários</h3>
-            <p>Ideia central, atividade prática, desafio da vida real com versão mínima, exemplo ilustrativo e pergunta de reflexão para a noite.</p>
-          </article>
-          <article class="inc">
-            <h3>Kit de situações</h3>
-            <p>Seis exercícios para levar no bolso: fotos, roupas, praia e piscina, festas, conversas e comparação social.</p>
-          </article>
-          <article class="inc">
-            <h3>Plano para quando a autocrítica aparecer</h3>
-            <p>O plano PAUSA em 5 passos, a regra dos 20 minutos, como distinguir crítica útil, ruído e crítica cruel, e mini-roteiros para cenas difíceis.</p>
-          </article>
-          <article class="inc">
-            <h3>Plano de continuidade de 30 dias</h3>
-            <p>Três hábitos diários, um calendário dia a dia e um cartão de emergência para os dias difíceis.</p>
-          </article>
-          <article class="inc">
-            <h3>Resumo das ferramentas</h3>
-            <p>Uma tabela com cada ferramenta, quando usar e o que ela faz em uma linha, para consulta rápida.</p>
-          </article>
-          <article class="inc">
-            <h3>Orientação sobre quando buscar ajuda</h3>
-            <p>Sinais de que o guia não basta e a indicação de apoio profissional, com o CVV (188) para momentos de sofrimento agudo.</p>
-          </article>
-        </div>
-
-        <p class="note">Os personagens dos exemplos (Carol, Rafael, Marcos, Juliana, Henrique, Larissa e Diego) são fictícios e criados para ilustrar as atividades. Não são depoimentos nem resultados de pessoas reais.</p>
-      </div>
-    </section>
-
-    <!-- LIMITES / HONESTIDADE -->
-    <section class="section">
-      <div class="wrap narrow">
-        <p class="eyebrow">Sem exageros</p>
-        <h2>O que este guia faz e o que ele não faz</h2>
-        <div class="reco">
-          <div class="reco__col">
-            <h3>O que ele faz</h3>
-            <ul class="ticks">
-              <li>Ajuda a perceber padrões: o que você evita, o que gasta sua atenção, quando a comparação pesa mais.</li>
-              <li>Oferece ferramentas curtas, que cabem no bolso e podem ser usadas na hora.</li>
-              <li>Faz você testar suas previsões com a realidade, em vez de só imaginá-las.</li>
-            </ul>
-          </div>
-          <div class="reco__col reco__col--no">
-            <h3>O que ele não faz</h3>
-            <ul class="crosses">
-              <li>Não promete eliminar ansiedade, insegurança ou autocrítica.</li>
-              <li>Não muda personalidade: quem é tímido continua tímido, com mais opções do que se esconder.</li>
-              <li>Não garante resultado em 7 dias. Sete dias dão para começar e notar o que funciona para você.</li>
-              <li>Não trata o corpo como problema a resolver.</li>
-              <li>Não é terapia e não substitui terapia.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PREÇO -->
-    <section class="section section--price" id="comprar">
-      <div class="wrap">
-        <div class="price-card">
-          <p class="eyebrow eyebrow--light">Comece hoje</p>
-          <h2>Você é a sua virada</h2>
-          <p class="price-card__sub">7 dias para viver o verão com mais confiança e liberdade</p>
-
-          <div class="price">
-            <span class="price__cur">R$</span><span class="price__val">19,90</span>
-          </div>
-
-          <ul class="price-card__list">
-            <li>7 módulos diários com atividade e desafio</li>
-            <li>Kit de situações com 6 exercícios</li>
-            <li>Plano PAUSA para os momentos de autocrítica</li>
-            <li>Plano de continuidade de 30 dias</li>
-          </ul>
-
-          <a class="btn btn--primary btn--block" href="#comprar" data-checkout id="buy-main">Quero meu guia por R$&nbsp;19,90</a>
-          <p class="price-card__small">Produto digital. Material educativo e de autodesenvolvimento, que não substitui acompanhamento profissional.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <div class="wrap narrow">
-        <div class="center">
-          <p class="eyebrow">Perguntas frequentes</p>
-          <h2>Dúvidas comuns</h2>
-        </div>
-
-        <div class="faq">
-          <details>
-            <summary>Quanto tempo preciso por dia?</summary>
-            <p>De 5 a 15 minutos para a atividade, mais o desafio, que acontece na sua rotina normal. Alguns desafios, como os da praia e das festas, pedem mais tempo: você escolhe o momento do dia que couber. A sugestão é fazer um módulo por dia, de preferência em dias seguidos.</p>
-          </details>
-          <details>
-            <summary>Do que preciso para fazer o guia?</summary>
-            <p>De um caderno ou de um bloco de notas no celular, que no guia se chama “caderno de bordo”. Sem capricho: frases soltas bastam.</p>
-          </details>
-          <details>
-            <summary>Isso é terapia? Substitui acompanhamento profissional?</summary>
-            <p>Não. É um material educativo e de autodesenvolvimento, inspirado em ideias da TCC, da ACT e de práticas de autocompaixão. Não substitui avaliação, diagnóstico ou tratamento psicológico ou psiquiátrico.</p>
-          </details>
-          <details>
-            <summary>O guia vai acabar com a minha ansiedade ou insegurança?</summary>
-            <p>Não, e ele não promete isso. Todo mundo sente insegurança em alguma medida. O objetivo é que essas experiências deixem de decidir por você, dando mais opções do que se esconder. Também não há garantia de resultado em 7 dias: o hábito se firma com repetição, e por isso o guia traz um plano de continuidade de 30 dias.</p>
-          </details>
-          <details>
-            <summary>O guia é sobre emagrecer ou mudar o corpo?</summary>
-            <p>Não. Nenhuma atividade pede que você mude, esconda ou melhore a aparência. O corpo não é o projeto: o foco é a sua atenção e as suas escolhas.</p>
-          </details>
-          <details>
-            <summary>Os desafios são obrigatórios? E se um deles for difícil demais?</summary>
-            <p>Todos são opcionais e ajustáveis: você pode adaptar, adiar, pular ou pausar. Cada um tem uma “versão mínima” que vale como cumprida. A regra é fazer uma versão menor, mas fazer.</p>
-          </details>
-          <details>
-            <summary>E se eu perder um dia?</summary>
-            <p>Retome do ponto onde parou, sem recomeçar e sem se cobrar.</p>
-          </details>
-          <details>
-            <summary>Os exemplos e personagens do guia são depoimentos reais?</summary>
-            <p>Não. Carol, Rafael, Marcos, Juliana, Henrique, Larissa e Diego são personagens fictícios, criados para ilustrar as atividades. Não são depoimentos nem resultados de pessoas reais.</p>
-          </details>
-          <details>
-            <summary>Posso fazer o guia se estou em sofrimento intenso?</summary>
-            <p>Se você evita trabalho, estudo, saídas ou relacionamentos há meses por medo de ser julgado, se o incômodo com o corpo ocupa horas do seu dia, se há restrição alimentar rígida, compulsão ou exercício excessivo ligados à imagem corporal, ou se se sente sem esperança na maior parte dos dias, procure um psicólogo ou psiquiatra, e faça o guia apenas se o profissional concordar. Em sofrimento agudo ou com pensamentos de se machucar, ligue para o CVV (188), 24 horas, gratuito, ou procure o serviço de urgência mais próximo.</p>
-          </details>
-          <details>
-            <summary>Como recebo o guia depois da compra?</summary>
-            <p>Depois da confirmação do pagamento, você recebe o acesso ao guia digital conforme as instruções da página de compra.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA FINAL -->
-    <section class="final">
-      <div class="wrap narrow center">
-        <h2>A virada não é um dia.<br>É decidir o próximo gesto, de novo e de novo.</h2>
-        <p class="sub">O verão é curto. A atenção é o que você tem de mais valioso para gastar nele. Gaste com o que está acontecendo, não com o que vão pensar.</p>
-        <a class="btn btn--primary" href="#comprar" data-checkout>Quero meu guia por R$&nbsp;19,90</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="wrap">
-      <p><strong>Você é a sua virada</strong> — 7 dias para viver o verão com mais confiança e liberdade.</p>
-      <p class="footer__small">
-        Este material tem caráter educativo e de autodesenvolvimento. Não substitui avaliação, diagnóstico ou tratamento psicológico ou psiquiátrico.
-        Em caso de sofrimento intenso, procure um profissional ou ligue para o CVV (188), 24 horas.
-      </p>
-      <!-- TODO: adicionar aqui contato/Instagram, termos de uso e política de privacidade quando existirem. -->
-      <p class="footer__small">© <span id="year">2026</span> Você é a sua virada. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- Barra de compra fixa no celular -->
-  <div class="stickybar" id="stickybar" aria-hidden="true">
-    <div class="stickybar__txt"><strong>R$&nbsp;19,90</strong><span>Você é a sua virada</span></div>
-    <a class="btn btn--primary btn--small" href="#comprar" data-checkout tabindex="-1">Quero meu guia</a>
+<header class="topbar" id="topo">
+  <div class="wrap topbar__in">
+    <a class="brand" href="#topo">
+      <span>Você é a sua virada</span>
+    </a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#problema">A cena</a>
+      <a href="#dias">7 dias</a>
+      <a href="#recebe">O que você recebe</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <a class="btn btn--small" href="#comprar" data-checkout>Quero meu guia</a>
   </div>
+</header>
 
-  <!-- Aviso exibido enquanto o checkout real não estiver configurado -->
-  <dialog id="checkout-dialog" class="dialog">
-    <form method="dialog">
-      <h3>Link de compra provisório</h3>
-      <p>O checkout ainda não foi conectado a esta página. Nenhuma compra pode ser feita por aqui por enquanto.</p>
-      <p class="dialog__dev">Para o responsável pelo site: substitua o valor de <code>CONFIG.checkoutUrl</code> no arquivo <code>script.js</code> pelo link real de pagamento.</p>
-      <button class="btn btn--primary" value="ok">Entendi</button>
-    </form>
-  </dialog>
+<main>
 
-  <script src="script.js"></script>
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <p class="eyebrow">Guia prático · 7 dias · para adultos</p>
+      <h1>Estar <em>dentro</em> do verão, e não assistindo de fora.</h1>
+      <p class="lead">
+        <strong>Você é a sua virada</strong> é um treino de 7 dias, com atividades curtas e desafios da vida real,
+        para viver praia, fotos, festas e conversas com mais confiança e liberdade, mesmo sem gostar de tudo em si.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#comprar" data-checkout>Quero meu guia por R$ 19,90</a>
+        <a class="btn btn--ghost" href="#dias">Ver os 7 dias</a>
+      </div>
+      <ul class="chips">
+        <li>5 a 15 min por dia</li>
+        <li>Só precisa de um caderno ou bloco de notas</li>
+        <li>Desafios opcionais e ajustáveis</li>
+      </ul>
+      <p class="fineprint">Material educativo e de autodesenvolvimento. Não é terapia e não substitui acompanhamento profissional.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="problema">
+  <div class="wrap narrow">
+    <p class="eyebrow">Uma cena que você conhece</p>
+    <h2>O dia está lindo. E você está em outro lugar.</h2>
+    <div class="scene">
+      <p>
+        Você chega na praia. O grupo já está na água, alguém grita “vem!”. E você, por dentro, está ajeitando a canga,
+        medindo quem está olhando, calculando quanto tempo dá para ficar parado ali sem parecer que está se escondendo.
+        Na foto do grupo, escolhe o canto e pede “tira outra”. À noite, na festa, a roupa foi trocada três vezes.
+      </p>
+    </div>
+    <p class="big">
+      Nada disso é frescura. É atenção sendo gasta longe do que está acontecendo: em vez de estar <em>dentro</em> da cena,
+      você está <em>assistindo</em> a ela de fora, como se fosse um juiz.
+    </p>
+    <p>
+      O verão cobra isso de um jeito particular, porque expõe o corpo, o rosto, as fotos e a convivência, tudo ao mesmo tempo.
+      A proposta deste guia é simples: treinar habilidades pequenas em situações reais.
+    </p>
+    <div class="reco">
+      <div class="reco__col">
+        <h3>Este guia é para você se…</h3>
+        <ul class="ticks">
+          <li>Quer curtir praia, piscina, festas e viagens, mas se pega adiando ou escondendo.</li>
+          <li>Se compara com frequência, principalmente nas redes sociais.</li>
+          <li>Decide pelo que os outros vão pensar, e não pelo que quer.</li>
+          <li>Já tentou “pensar positivo” e sentiu que isso não funcionou na hora H.</li>
+        </ul>
+      </div>
+      <div class="reco__col reco__col--no">
+        <h3>Este guia não é para você se…</h3>
+        <ul class="crosses">
+          <li>Busca transformação de aparência, dieta ou corpo.</li>
+          <li>Espera que a ansiedade ou a insegurança desapareçam.</li>
+          <li>Está em sofrimento intenso. Nesses casos, procure um profissional.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sea" id="metodo">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow eyebrow--light">O método</p>
+      <h2>Três movimentos e uma regra</h2>
+      <p class="sub">Um treino curto, com tarefas pequenas e reais, inspirado em ideias da TCC, ACT e práticas de autocompaixão.</p>
+    </div>
+
+    <div class="moves">
+      <article class="move">
+        <span class="move__n">1</span>
+        <h3>Notar</h3>
+        <p>Perceber o que a mente está dizendo: “estou me comparando”, “estou calculando o ângulo”.</p>
+      </article>
+      <article class="move">
+        <span class="move__n">2</span>
+        <h3>Escolher</h3>
+        <p>Trocar o “o que vão pensar?” por “o que eu quero que esse momento seja?”.</p>
+      </article>
+      <article class="move">
+        <span class="move__n">3</span>
+        <h3>Voltar</h3>
+        <p>Trazer a atenção para algo concreto da cena: a água, a música, a conversa ou o gosto da comida.</p>
+      </article>
+    </div>
+
+    <div class="rule">
+      <h3>A regra: degraus, não saltos</h3>
+      <p>Cada desafio é um pouco desconfortável, não insuportável. Se estiver difícil demais, você pode reduzir. Todos são opcionais e ajustáveis.</p>
+    </div>
+
+    <div class="benefits">
+      <h3 class="benefits__title">Ao final dos 7 dias, você terá três coisas que podem durar</h3>
+      <div class="benefits__grid">
+        <article>
+          <h4>Um caderno de bordo</h4>
+          <p>Com o que você descobriu sobre si: suas fugas, suas previsões e o que de fato aconteceu.</p>
+        </article>
+        <article>
+          <h4>Um kit de ferramentas</h4>
+          <p>Para fotos, roupas, praia, festas, conversas e comparação.</p>
+        </article>
+        <article>
+          <h4>Um acordo pessoal com o verão</h4>
+          <p>Escrito por você, com regras gentis e um plano para os dias ruins.</p>
+        </article>
+      </div>
+      <p class="honest">Não prometemos uma pessoa nova. Prometemos um jeito mais firme de continuar sendo você em lugares onde antes você se encolhia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="dias">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">Os 7 dias</p>
+      <h2>Uma atividade curta e um desafio da vida real, por dia</h2>
+      <p class="sub">Cada dia tem uma ideia central, atividade prática, desafio e pergunta de reflexão.</p>
+    </div>
+
+    <ol class="days">
+      <li class="day">
+        <div class="day__n"><span>Dia</span>1</div>
+        <div class="day__body">
+          <h3>Mapa: o que você evita e o que você quer</h3>
+          <p class="day__meta">Atividade de 15 min · Mapa do verão</p>
+          <p>Enxergar o desenho das suas pequenas fugas e escolher uma delas como alvo.</p>
+          <p class="day__ch"><strong>Desafio:</strong> observar suas fugas e registrar pelo menos 3. <em>Versão mínima: registrar 1.</em></p>
+        </div>
+      </li>
+      <li class="day">
+        <div class="day__n"><span>Dia</span>2</div>
+        <div class="day__body">
+          <h3>Fotos: de objeto de avaliação a registro de vivência</h3>
+          <p class="day__meta">Atividade de 10 min</p>
+          <p>Olhar uma foto como repórter e como amigo, e aprender a regra dos 3 segundos.</p>
+          <p class="day__ch"><strong>Desafio:</strong> aparecer em uma foto sem pedir para repetir nem apagar.</p>
+        </div>
+      </li>
+      <li class="day">
+        <div class="day__n"><span>Dia</span>3</div>
+        <div class="day__body">
+          <h3>Roupas: vestir para viver, não para se defender</h3>
+          <p class="day__meta">Atividade de 10 min</p>
+          <p>Escolher pelo que deixa você livre para fazer o que quer, e não pelo que esconde mais.</p>
+          <p class="day__ch"><strong>Desafio:</strong> usar uma peça que normalmente evitaria.</p>
+        </div>
+      </li>
+      <li class="day">
+        <div class="day__n"><span>Dia</span>4</div>
+        <div class="day__body">
+          <h3>Comparação social: usar a régua certa</h3>
+          <p class="day__meta">Atividade de 12 min</p>
+          <p>Notar a comparação, rotulá-la e decidir o que fazer com ela.</p>
+          <p class="day__ch"><strong>Desafio:</strong> usar “Notar, Rotular, Retornar” em situações reais.</p>
+        </div>
+      </li>
+      <li class="day">
+        <div class="day__n"><span>Dia</span>5</div>
+        <div class="day__body">
+          <h3>Praia e piscina: o corpo como lugar de onde você vive</h3>
+          <p class="day__meta">Atividade de 10 min</p>
+          <p>Trocar a vigilância de si e dos outros por atenção aos sentidos e ao movimento.</p>
+          <p class="day__ch"><strong>Desafio:</strong> praticar a âncora dos cinco sentidos ao ar livre.</p>
+        </div>
+      </li>
+      <li class="day">
+        <div class="day__n"><span>Dia</span>6</div>
+        <div class="day__body">
+          <h3>Festas e conversas: atenção para fora</h3>
+          <p class="day__meta">Atividade de 12 min</p>
+          <p>Montar perguntas abertas, histórias curtas, uma saída gentil e uma meta pequena.</p>
+          <p class="day__ch"><strong>Desafio:</strong> iniciar ou continuar uma conversa de pelo menos 5 minutos.</p>
+        </div>
+      </li>
+      <li class="day">
+        <div class="day__n"><span>Dia</span>7</div>
+        <div class="day__body">
+          <h3>Balanço e acordo pessoal com o verão</h3>
+          <p class="day__meta">Atividade de 15 min</p>
+          <p>Uma revisão do que funcionou para você e um compromisso escrito com as suas palavras.</p>
+          <p class="day__ch"><strong>Desafio:</strong> compartilhar o acordo com alguém de confiança e marcar o primeiro passo na agenda.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="center cta-inline">
+      <a class="btn btn--primary" href="#comprar" data-checkout>Quero começar os 7 dias</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand" id="recebe">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow">O que você recebe</p>
+      <h2>Tudo o que está dentro do guia</h2>
+      <p class="sub">Um único material completo, sem módulos escondidos e sem bônus à parte.</p>
+    </div>
+    <div class="includes">
+      <article class="inc">
+        <h3>7 módulos diários</h3>
+        <p>Ideia central, atividade prática, desafio da vida real, exemplo ilustrativo e pergunta de reflexão.</p>
+      </article>
+      <article class="inc">
+        <h3>Kit de situações</h3>
+        <p>Seis exercícios para fotos, roupas, praia e piscina, festas, conversas e comparação social.</p>
+      </article>
+      <article class="inc">
+        <h3>Plano para quando a autocrítica aparecer</h3>
+        <p>O plano PAUSA em 5 passos, a regra dos 20 minutos e mini-roteiros para cenas difíceis.</p>
+      </article>
+      <article class="inc">
+        <h3>Plano de continuidade de 30 dias</h3>
+        <p>Três hábitos diários, um calendário e um cartão de emergência para os dias difíceis.</p>
+      </article>
+      <article class="inc">
+        <h3>Resumo das ferramentas</h3>
+        <p>Uma tabela com cada ferramenta, quando usar e o que ela faz.</p>
+      </article>
+      <article class="inc">
+        <h3>Orientação sobre quando buscar ajuda</h3>
+        <p>Sinais de que o guia não basta e indicação de apoio profissional, com o CVV (188).</p>
+      </article>
+    </div>
+    <p class="note">Os personagens dos exemplos são fictícios. Não são depoimentos nem resultados de pessoas reais.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow">
+    <p class="eyebrow">Sem exageros</p>
+    <h2>O que este guia faz e o que ele não faz</h2>
+    <div class="reco">
+      <div class="reco__col">
+        <h3>O que ele faz</h3>
+        <ul class="ticks">
+          <li>Ajuda a perceber padrões e situações de comparação.</li>
+          <li>Oferece ferramentas curtas para usar na hora.</li>
+          <li>Ajuda você a testar suas previsões com a realidade.</li>
+        </ul>
+      </div>
+      <div class="reco__col reco__col--no">
+        <h3>O que ele não faz</h3>
+        <ul class="crosses">
+          <li>Não promete eliminar ansiedade ou insegurança.</li>
+          <li>Não garante resultado em 7 dias.</li>
+          <li>Não trata o corpo como problema a resolver.</li>
+          <li>Não é terapia e não substitui terapia.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--price" id="comprar">
+  <div class="wrap">
+    <div class="price-card">
+      <p class="eyebrow eyebrow--light">Comece hoje</p>
+      <h2>Você é a sua virada</h2>
+      <p class="price-card__sub">7 dias para viver o verão com mais confiança e liberdade</p>
+      <div class="price">
+        <span class="price__cur">R$</span><span class="price__val">19,90</span>
+      </div>
+      <ul class="price-card__list">
+        <li>7 módulos diários com atividade e desafio</li>
+        <li>Kit de situações com 6 exercícios</li>
+        <li>Plano PAUSA para os momentos de autocrítica</li>
+        <li>Plano de continuidade de 30 dias</li>
+      </ul>
+      <a class="btn btn--primary btn--block" href="#comprar" data-checkout id="buy-main">Quero meu guia por R$ 19,90</a>
+      <p class="price-card__small">Produto digital. Material educativo e de autodesenvolvimento, que não substitui acompanhamento profissional.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap narrow">
+    <div class="center">
+      <p class="eyebrow">Perguntas frequentes</p>
+      <h2>Dúvidas comuns</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Quanto tempo preciso por dia?</summary>
+        <p>De 5 a 15 minutos para a atividade, mais o desafio, que acontece na sua rotina normal.</p>
+      </details>
+      <details>
+        <summary>Do que preciso para fazer o guia?</summary>
+        <p>De um caderno ou de um bloco de notas no celular.</p>
+      </details>
+      <details>
+        <summary>Isso é terapia?</summary>
+        <p>Não. É um material educativo e de autodesenvolvimento. Não substitui avaliação ou tratamento profissional.</p>
+      </details>
+      <details>
+        <summary>O guia vai acabar com a minha ansiedade?</summary>
+        <p>Não, e ele não promete isso. O objetivo é oferecer ferramentas para que a insegurança tenha menos poder sobre suas escolhas.</p>
+      </details>
+      <details>
+        <summary>O guia é sobre emagrecer ou mudar o corpo?</summary>
+        <p>Não. O foco é sua atenção e suas escolhas, não a aparência.</p>
+      </details>
+      <details>
+        <summary>Os desafios são obrigatórios?</summary>
+        <p>Não. Todos são opcionais e ajustáveis. Você pode adaptar, adiar ou pausar.</p>
+      </details>
+      <details>
+        <summary>E se eu perder um dia?</summary>
+        <p>Retome do ponto onde parou, sem recomeçar e sem se cobrar.</p>
+      </details>
+      <details>
+        <summary>Como recebo o guia depois da compra?</summary>
+        <p>Depois da confirmação do pagamento, você recebe o acesso ao guia digital conforme as instruções da página de compra.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap narrow center">
+    <h2>A virada não é um dia.<br>É decidir o próximo gesto, de novo e de novo.</h2>
+    <p class="sub">O verão é curto. A atenção é o que você tem de mais valioso para gastar nele. Gaste com o que está acontecendo, não com o que vão pensar.</p>
+    <a class="btn btn--primary" href="#comprar" data-checkout>Quero meu guia por R$ 19,90</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><strong>Você é a sua virada</strong> — 7 dias para viver o verão com mais confiança e liberdade.</p>
+    <p class="footer__small">Este material tem caráter educativo e de autodesenvolvimento. Não substitui avaliação, diagnóstico ou tratamento psicológico ou psiquiátrico. Em caso de sofrimento intenso, procure um profissional ou ligue para o CVV (188), 24 horas.</p>
+    <p class="footer__small">© <span id="year">2026</span> Você é a sua virada. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<div class="stickybar" id="stickybar" aria-hidden="true">
+  <div class="stickybar__txt">
+    <strong>R$ 19,90</strong>
+    <span>Você é a sua virada</span>
+  </div>
+  <a class="btn btn--primary btn--small" href="#comprar" data-checkout tabindex="-1">Quero meu guia</a>
+</div>
+
+<dialog id="checkout-dialog" class="dialog">
+  <form method="dialog">
+    <h3>Não foi possível abrir a página de pagamento</h3>
+    <p>Tente novamente em instantes ou atualize esta página.</p>
+    <button class="btn btn--primary" value="ok">Entendi</button>
+  </form>
+</dialog>
+
+<script src="script.js"></script>
 </body>
 </html>
